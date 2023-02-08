@@ -20,11 +20,11 @@ public class Main {
         }
         System.out.println("Welcome");
         System.out.println("What are you want?" + "\n" +
-                "1. Show all available products;\n" +//yes
-                "2. Make purchase;\n" +//yes
-                "3. Show my basket;\n" +//мышка поч не работает
+                "1. Show all available products;\n" +
+                "2. Make purchase;\n" +
+                "3. Show my basket;\n" +
                 "4. Log in as Admin\n" +
-                "0. Exit");//yes
+                "0. Exit");
         int selection = sc.nextInt();
         Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
         ResultSet resultSet= null;
@@ -344,7 +344,7 @@ public class Main {
                     Admin admin = new Admin(login, password);
                     if (admin.forAdmin(login, password)) {
                         System.out.println("What are you want?" + "\n" +
-                                "1. Edit products;\n" +//yes
+                                "1. Edit products;\n" +
                                 "2. Add new product;\n" +
                                 "3. Remove products;\n" +
                                 "4. Exit from admin;");
@@ -995,7 +995,7 @@ public class Main {
                         }
                     }
                     else
-                        System.out.print("Go fuck");
+                        System.out.print("Go away, you are not admin.");
                     break;
                 default:
                     System.out.print("Nothing have chosen.");
