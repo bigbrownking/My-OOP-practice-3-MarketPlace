@@ -13,11 +13,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<Devices> devices = new ArrayList<>();
         Basket basket = new Basket();
-        int exit = 0;
-        switch (exit){
-            case 0:
-
-        }
         System.out.println("Welcome");
         System.out.println("What are you want?" + "\n" +
                 "1. Show all available products;\n" +
@@ -614,7 +609,8 @@ public class Main {
                                                 }
                                                 break;
                                         }
-                                    } catch (Exception ex) {
+                                    } 
+                                    catch (Exception ex) {
                                         System.out.println("Good");
                                     }
                                     break;
@@ -838,7 +834,8 @@ public class Main {
                                                 preparedStatement.setInt(6, price);
                                                 break;
                                         }
-                                    } catch (Exception ex) {
+                                    } 
+                                    catch (Exception ex) {
                                         System.out.println("Good");
                                     }
                                     break;
@@ -875,9 +872,6 @@ public class Main {
                                                     if (resultSet4.getInt(1) == monitor_id) {
                                                         String sql = "DELETE FROM screen WHERE id = " + monitor_id;
                                                         statement.executeUpdate(sql);
-
-
-
                                                     }
                                                 }
                                                 break;
